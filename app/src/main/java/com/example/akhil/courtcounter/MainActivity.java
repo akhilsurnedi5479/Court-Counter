@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     int teamAscore=0;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         teamBscore=0;
         displayForTeamA(teamAscore);
         displayForTeamB(teamBscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"Score reset",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      * Displays the given score for Team A.
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     public void threePointsA(View view){
         teamAscore=teamAscore+3;
         displayForTeamA(teamAscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"A scored 3 points..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      *  When Team A gets 2 Points.
@@ -42,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public void twoPointsA(View view){
         teamAscore=teamAscore+2;
         displayForTeamA(teamAscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"A scored 2 points..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      *  When Team A gets freeThrow Points.
@@ -49,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     public void freeThrowA(View view){
         teamAscore=teamAscore+1;
         displayForTeamA(teamAscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"A scored 1 point..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      * Displays the given score for Team B.
@@ -56,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+
     }
     /**
      * When Team B gets 3 Points.
@@ -63,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
     public void threePointsB(View view){
         teamBscore=teamBscore+3;
         displayForTeamB(teamBscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"B scored 3 points..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      * When Team B gets 2 points.
@@ -70,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
     public void twoPointsB(View view){
         teamBscore=teamBscore+2;
         displayForTeamB(teamBscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"B scored 2 points..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     /**
      * When Team B get freethrows.
@@ -77,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
     public void freeThrowB(View view){
         teamBscore=teamBscore+1;
         displayForTeamB(teamBscore);
+        Toast toastMessage=Toast.makeText(getApplicationContext(),"B scored 1 point..",Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
 
     /**
